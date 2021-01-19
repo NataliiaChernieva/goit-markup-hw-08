@@ -81,8 +81,15 @@ body {
 }
 
 .section {
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 }
 
 .button {
@@ -101,6 +108,12 @@ body {
   letter-spacing: 0.06em;
   padding: 10px 32px;
   cursor: pointer;
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function);
+}
+
+.button:hover, .button:focus {
+  background-color: var(--accent-color);
+  color: var(--other-color-text);
 }
 
 /*.button {
@@ -121,15 +134,6 @@ body {
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
-
-  transition: color 250ms var(--timing-function),
-    background-color 250ms var(--timing-function);
-
-  &:hover,
-  &:focus {
-    background-color: var(--accent-color);
-    color: var(--other-color-text);
-  }
 }
 */
 .social-list {
@@ -325,10 +329,9 @@ body {
   align-items: center;
 }
 
-.section.no-padding {
+/*.section.no-padding {
   padding-bottom: 0;
-}
-
+} */
 .header-nav {
   display: flex;
   align-items: center;
@@ -445,69 +448,43 @@ li.connect-item:not(:last-child) {
 }
 
 .hero-title {
-  display: inline-block;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.615;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--other-color-text);
-  width: 360px;
+  max-width: 360px;
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 320px), screen and (min-resolution: 192dpi) and (min-width: 320px), screen and (min-resolution: 2dppx) and (min-width: 320px) {
   .img-bgcolor {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg-mobile@2x.jpg");
   }
 }
 
-/*.img-bgcolor {
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url('../images/img.jpg');
-  background-repeat: no-repeat;
+@media screen and (min-width: 768px) {
+  .img-bgcolor {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
-.hero {
-  min-height: 600px;
-  text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
-}
-
-.hero-title {
-  display: inline-block;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.363;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--other-color-text);
-  width: 696px;
-  margin-bottom: 30px;
-}
-*/
-.section.no-padding {
-  padding-bottom: 0;
-}
-
-.advantages {
-  display: flex;
-  padding-bottom: 0;
-}
-
-.advantages-item {
-  display: block;
-  /*width: calc(100%-90)/4;*/
-  width: 270px;
-}
-
-.advantages-item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .hero {
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  .hero-title {
+    font-size: 44px;
+    line-height: 1.363;
+    max-width: 696px;
+  }
 }
 
 .advantages-icon {
@@ -526,6 +503,7 @@ li.connect-item:not(:last-child) {
   line-height: 1.143;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
   margin-bottom: 10px;
 }
 
@@ -535,6 +513,58 @@ li.connect-item:not(:last-child) {
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
+}
+
+@media screen and (max-width: 767px) {
+  .advantages-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .advantages {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .advantages-item {
+    display: block;
+    width: 354px;
+  }
+  .advantages-item:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+  .advantages-item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
+  .list-title {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section.no-padding {
+    padding-bottom: 0;
+  }
+  .advantages {
+    display: flex;
+    padding-bottom: 0;
+  }
+  .advantages-item {
+    display: block;
+    width: 270px;
+  }
+  .advantages-item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .list-title {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .for-desktop {
+    display: none;
+  }
 }
 
 .titles {
