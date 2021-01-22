@@ -143,14 +143,24 @@
             </section>
         
 
-        <!--Наша команда
+        <!--Наша команда-->
         <section class="section team-bgcolor">
             <div class="container">
             <h2 class="titles">Наша команда</h2>
             <ul class="dots team">
                 <li class="card-list">
-                    
-                       <img src="./images/igor.jpg" alt="Игорь Демьяненко" width="270" height="260">
+                       <picture class="card-list-picture">
+                           <source 
+                             srcset="./images/img/img1-desk-1х.jpg 1x, ./images/img/img1-desk-2х.jpg 2x " 
+                             media="(min-width: 1200px)"/>
+                           <source 
+                             srcset="./images/img/img1-tablet-1х.jpg 1x, ./images/img/img1-tablet-2х.jpg 2x " 
+                             media="(min-width: 768px)"/>
+                           <source
+                             srcset="./images/img/img1-1x.jpg 1x, ./images/img/img1-2x.jpg 2x "
+                             media="(min-width: 480px)"/>
+                           <img src="./images/img/img1-1х.jpg" alt="Игорь Демьяненко"/>
+                       </picture>
                        <h3 class="name">Игорь Демьяненко</h3>
                        <p class="profession name" lang="en">Product Designer</p>
                        
@@ -192,8 +202,17 @@
                     
                 </li>
                 <li class="card-list">
-                    
-                        <img src="./images/olga.jpg" alt="Ольга Репина" width="270" height="260">
+                        <picture class="card-list-picture">
+                            <source 
+                               srcset="./images/img/img2-desk-1х.jpg 1x, ./images/img/img2-desk-2х.jpg 2x " 
+                               media="(min-width: 1200px)" />
+                            <source 
+                                srcset="./images/img/img2-tablet-1х.jpg 1x, ./images/img/img2-tablet-2х.jpg 2x "
+                                media="(min-width: 768px)" />
+                            <source 
+                                srcset="./images/img/img2-1x.jpg 1x, ./images/img/img2-2x.jpg 2x " 
+                                media="(min-width: 480px)" />
+                            <img src="./images/img/img2-1х.jpg" alt="Ольга Репина" />
                         <h3 class="name">Ольга Репина</h3>
                         <p class="profession name" lang="en">Frontend Developer</p>
                         <ul class="dots social-list">
@@ -234,7 +253,7 @@
 
                 <li class="card-list">
                     
-                        <img src="./images/nikolai.jpg" alt="Николай Тарасов" width="270" height="260">
+                        <img src="./images/nikolai.jpg" alt="Николай Тарасов">
                         <h3 class="name">Николай Тарасов</h3>
                         <p class="profession name" lang="en">Marketing</p>
                         <ul class="dots social-list">
@@ -276,7 +295,7 @@
 
                 <li class="card-list">
                     
-                        <img src="./images/mihail.jpg" alt="Михаил Ермаков" width="270" height="260">
+                        <img src="./images/mihail.jpg" alt="Михаил Ермаков">
                         <h3 class="name">Михаил Ермаков</h3>
                         <p class=" profession name" lang="en">UI Designer</p>
                         <ul class="dots social-list">
@@ -316,7 +335,7 @@
             </li>
             </ul>
         </div>
-        </section>-->
+        </section>
 
         <!--Постоянные клиенты-->
         <section class="section">
@@ -460,7 +479,7 @@
 
     </section>
 
-    <!--Модальное окно
+    <!--Модальное окно-->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="close-btn" data-modal-close>

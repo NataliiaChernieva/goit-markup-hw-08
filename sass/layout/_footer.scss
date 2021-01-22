@@ -1,5 +1,8 @@
 .second-bgcolor {
   background-color: var(--secondary-bg-color);
+}
+
+.footer {
   padding-bottom: 60px;
   padding-top: 60px;
 }
@@ -80,7 +83,7 @@
 
 .form-input {
   box-sizing: border-box;
-  min-width: 358px;
+  width: 450px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   background-color: var(--secondary-bg-color);
@@ -125,6 +128,13 @@
     margin-right: 165px;
     margin-left: 76px;
   }
+
+  .join form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 151px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -160,6 +170,10 @@
     font-size: 26px;
     line-height: 1.192;
   }
+
+  input {
+    padding: 0;
+  }
 }
 
 /*.addresses {
@@ -175,13 +189,6 @@
     margin-bottom: 9px;
   }
 }
-
-.footer {
-   display: block;
-   
-}
-
-
 
 .footer {
   display: flex;
@@ -237,11 +244,5 @@ input {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-button {
-  display: inline-flex;
-  border: 1px;
-  min-width: 200px;
-  padding: 10px 29px;
-  margin-left: 12px;
-}
+
 */
