@@ -117,7 +117,7 @@ body {
   color: var(--other-color-text);
 }
 
-form .button {
+.form .button {
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -854,43 +854,9 @@ li.connect-item:not(:last-child) {
   }
 }
 
-/*.team {
-  display: flex;
-}
-
-.card-list {
-  box-sizing: border-box;
-  height: 428px;
-  background: var(--primary-bg-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-  padding-bottom: 30px;
-
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-
-.card-list img {
+/*.card-list img {
 width: 270px;
 height: 260px;}
-
-.name {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.188;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-top: 30px;
-}
-
-.profession {
-  font-weight: 400;
-  color: var(--secondary-text-color);
-  margin-top: 10px;
-  margin-bottom: 16px;
-}
 */
 .clients {
   display: flex;
@@ -1007,10 +973,6 @@ height: 260px;}
   color: var(--accent-color);
 }
 
-.join:not(:last-child) {
-  margin-bottom: 60px;
-}
-
 .footer-title {
   color: var(--other-color-text);
   font-weight: 700;
@@ -1049,15 +1011,6 @@ height: 260px;}
   color: rgba(255, 255, 255, 0.6);
 }
 
-@media screen and (max-width: 1199px) {
-  .footer {
-    text-align: center;
-  }
-  .form-input {
-    margin-bottom: 20px;
-  }
-}
-
 .footer-button {
   display: inline-flex;
   border: 1px;
@@ -1068,6 +1021,22 @@ height: 260px;}
 
 .footer-form-icon {
   margin-left: 10px;
+}
+
+.footer-form-icon {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer {
+    text-align: center;
+  }
+  .form-input {
+    margin-bottom: 20px;
+  }
+  .join:not(:last-child) {
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1098,13 +1067,12 @@ height: 260px;}
     padding: 0;
   }
   .first {
-    margin-bottom: 60px;
-    margin-top: 60px;
+    margin-bottom: 0px;
     margin-right: 70px;
   }
   .join {
-    margin-top: 72px;
-    margin-bottom: 100px;
+    margin-top: 12px;
+    margin-bottom: 0px;
   }
   .join:not(:last-child) {
     margin-right: 93px;
@@ -1114,8 +1082,8 @@ height: 260px;}
     font-size: 26px;
     line-height: 1.192;
   }
-  input {
-    padding: 0;
+  .form-input {
+    width: 358px;
   }
 }
 
@@ -1165,7 +1133,6 @@ height: 260px;}
   text-transform: uppercase;
   margin-bottom: 30px;
 }
-
 
 
 input {
