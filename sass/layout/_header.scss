@@ -1,15 +1,38 @@
 .header {
   border-bottom: 1px solid #ececec;
+}
 
-  & .container {
-    display: flex;
-    align-items: center;
+.connect {
+  color: var(--secondary-text-color);
+  font-style: normal;
+  text-decoration: none;
+
+  transition: color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
   }
 }
 
-/*.section.no-padding {
-  padding-bottom: 0;
-} */
+li.connect-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.connect-icon {
+  fill: var(--secondary-text-color);
+
+  transition: fill 2500ms var(--timing-function);
+
+  .connect:hover &,
+  .connect:focus & {
+    fill: var(--accent-color);
+  }
+}
+
+.logo {
+  color: var(--logo-color);
+}
 
 .header-nav {
   display: flex;
@@ -17,9 +40,201 @@
   justify-content: space-between;
 }
 
-.logo {
-  color: var(--logo-color);
+.logo-link {
+  display: inline-block;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.167;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: var(--primary-text-color);
+  //min-width: 145px;
+
+  transition: color 250ms var(--timing-function);
+
+  &:focus {
+    color: var(--accent-color);
+  }
 }
+
+.link {
+  color: inherit;
+  text-decoration: none;
+
+  transition: color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.nav-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.167;
+  letter-spacing: 0.02em;
+}
+
+.navigation {
+  & .link.current {
+    color: var(--accent-color);
+  }
+
+  & .link.current::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    position: relative;
+  }
+
+  .menu-button {
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+    //border: 0;
+    background-color: transparent;
+
+    & .icon-cross {
+      display: none;
+    }
+
+    &.is-open .icon-cross {
+      display: block;
+    }
+
+    &.is-open .icon-menu {
+      display: none;
+    }
+  }
+
+  .menu-container {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background-color: var(--primary-bg-color);
+    padding: 60px 0px;
+    text-align: center;
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  .navigation {
+    margin-bottom: 60px;
+
+    & li {
+      margin-bottom: 40px;
+    }
+  }
+
+  .logo-link {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+
+  .menu-container {
+    display: flex;
+  }
+
+  .logo-link {
+    margin-right: 88px;
+    margin-top: 26px;
+    margin-bottom: 26px;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    margin-right: 84px;
+
+    & li:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+
+  .connection {
+    margin-top: 21px;
+    margin-bottom: 21px;
+  }
+
+  li.connect-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .nav-title {
+    font-size: 14px;
+    line-height: 1.143;
+  }
+
+  .connect-item .nav-title {
+    font-size: 12px;
+    line-height: 1.167;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .connection {
+    display: flex;
+    //margin-left: auto;
+    align-items: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  .logo-link {
+    font-size: 26px;
+    line-height: 1.192;
+    margin-right: 93px;
+    margin-bottom: 25px;
+    margin-top: 24px;
+  }
+
+  .navigation {
+    margin-right: 280px;
+  }
+
+  li.connect-item:not(:last-child) {
+    margin-right: 50px;
+    margin-bottom: 0px;
+  }
+
+  .connect-item .nav-title {
+    font-size: 14px;
+    line-height: 1.142;
+  }
+}
+/* 
+  
+  
+}
+
+//.section.no-padding {
+ // padding-bottom: 0;
+//}
+
+
+
 
 .logo-link {
   display: block;
@@ -86,11 +301,8 @@
   padding-bottom: 32px;
 }
 
-.connection {
-  display: flex;
-  margin-left: auto;
-  align-items: center;
-}
+
+
 
 li.connect-item:not(:last-child) {
   margin-right: 50px;
@@ -119,3 +331,5 @@ li.connect-item:not(:last-child) {
     fill: var(--accent-color);
   }
 }
+
+*/
