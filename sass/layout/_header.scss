@@ -149,6 +149,20 @@ li.connect-item:not(:last-child) {
     margin-top: 16px;
     margin-bottom: 16px;
   }
+
+  .icon-menu,
+  .icon-cross {
+    fill: var(--secondary-text-color);
+
+    transition: fill 2500ms var(--timing-function);
+  }
+
+  .icon-menu:hover,
+  .icon-menu:focus,
+  .icon-cross:hover,
+  .icon-cross:focus {
+    fill: var(--accent-color);
+  }
 }
 
 @media screen and (min-width: 768px) {
